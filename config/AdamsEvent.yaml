@@ -1,0 +1,37 @@
+# Fixed parameters and priors
+
+tvec:
+    dt:      5.        # Cadence
+    Tobs:    2.1         # Length of observation in years
+
+default:                 # Default values for the parameters
+
+    M:    4e5 #2e6  # Mass of the central object (observed)
+    mu:   17. # Mass of the compact object
+
+    # p0:  # initial separation is defined from Tobs
+    e_f:   0.16 #0.177  # eccentricity at plunge, will be used to estimate intial eccentricity
+    SNR : 42.
+    # dist = 1.0  # distance, start with z = 1 and adjust 
+
+limits:
+
+    min:
+        Phi_phi0:   0.0  # initial phase in phi 
+        Phi_theta0: 0.0  # initial phase in theta
+        Phi_r0:     0.0  # initial phase in r
+
+        theK:      -1.0  # polar angle of spin
+        phiK:       0.0  # cos azimuthal angle of spin
+        theS:      -1.0  # polar sky localisation in SSB
+        phiS:       0.0  # cos azimuthal sky localisation in SSB
+
+    max:
+        Phi_phi0:   2.0  # multiply by pi 
+        Phi_theta0: 2.0  # multiply by pi
+        Phi_r0:     2.0  # multiply by pi
+            
+        theK:       1.0 
+        phiK:       2.0  # multiply by pi
+        theS:       1.0
+        phiS:       2.0  # multiply by pi 
